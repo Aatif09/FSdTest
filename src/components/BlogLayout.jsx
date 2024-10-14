@@ -12,7 +12,7 @@ const BlogLayout = () => {
       </header>
 
       <section className="search-section">
-        <input type="text" placeholder="Search posts..." />
+        <input type="text" placeholder="Search postsssss" />
         <button>Search</button>
       </section>
     </div>

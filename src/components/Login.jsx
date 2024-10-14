@@ -14,48 +14,45 @@ const Login = ({ setUser }) => {
 
     // Basic validation
     if (!name || !email || !password) {
-      alert('All fields are required!');
+      alert('Please fill in all fields.');
       return;
     }
 
-
+    // Set user info
     setUser({ name, email });
 
-
+    // Navigate to home page
     navigate('/home');
   };
 
   return (
     <div>
-      <h1>Login Page</h1>
+      <h2>Please Login</h2>
       <form onSubmit={handleLogin}>
-        <div>
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type={showPassword ? 'text' : 'password'}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="button" onClick={() => setShowPassword(!showPassword)}>
-            {showPassword ? 'Hide' : 'Show'} Password
-          </button>
-        </div>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type={showPassword ? "text" : "password"}
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="button" onClick={() => setShowPassword(!showPassword)}>
+          {showPassword ? "Hide" : "Show"} Password
+        </button>
         <button type="submit">Login</button>
       </form>
     </div>

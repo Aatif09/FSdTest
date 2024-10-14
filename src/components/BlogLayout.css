@@ -1,9 +1,8 @@
-/* General container styling */
 .blog-container {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f5deb3;
-  /* beige background */
+
   height: 100vh;
 }
 
@@ -30,10 +29,10 @@
   font-weight: bold;
 }
 
-/* Search section styling */
+
 .search-section {
   background-color: #6a5acd;
-  /* slate blue */
+
   padding: 30px;
   border-radius: 15px;
 }
